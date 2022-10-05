@@ -39,7 +39,7 @@ let getJoke = () => {
     getJoke()
   });
 
-btn.addEventListener("click", getJoke) 
+btn.addEventListener("click", getJoke);
 getJoke();
 
 btn.addEventListener('click', function handleClick() {
