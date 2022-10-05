@@ -24,9 +24,9 @@ let getJoke = () => {
       // jokeContainer.textContent = error.message;
       // * check if browser is online or not
       if(!window.navigator.onLine){
-        jokeContainer.textContent = "Error: Your browser is offline. \nPlease try again with internet connection.";
+        jokeContainer.textContent = "Error: Your browser is offline. \nPlease try again once you're connected to the internet.";
       }else{
-        jokeContainer.textContent = "Some Error Occurred: "+ error + ".\n Please try again";
+        jokeContainer.textContent = "An Error Occurred: "+ error + ".\n Please try again";
         jokeContainer.classList.add("fade");
       }
     });    
@@ -39,12 +39,17 @@ let getJoke = () => {
     getJoke()
   });
 
-btn.addEventListener("click", getJoke);
+btn.addEventListener("click", getJoke) 
 getJoke();
+
+btn.addEventListener('click', function handleClick() {
+  btn.textContent = 'Get Another Joke';
+});
+
 
 // Fade in 
 setTimeout(function () {
-  jokeContainer.innerHTML = "Get Some Joke"
+  jokeContainer.innerHTML = "Click the button to get a Joke"
   jokeContainer.style.opacity = 1;
 }, 500);
 
