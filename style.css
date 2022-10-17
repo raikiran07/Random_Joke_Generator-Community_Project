@@ -99,12 +99,13 @@ h3 {
   font-size: 16px;
   padding: 20px 80px;
   margin-top: 50px;
+  font-weight:bold;
   transition: all 0.2s ease-in-out;
 }
 
 .btn:hover {
   background-color: #a3d279;
-  font-weight: bold;
+  /* removed the font-weight:bold from here and add it to btn */
   color: black;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0, 0.1);
 }
